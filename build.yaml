@@ -1,0 +1,46 @@
+# This file generates the GitHub Actions matrix
+# For simple board + shield combinations, add them
+# to the top level board and shield arrays, for more
+# control, add individual board + shield combinations to
+# the `include` property, e.g:
+#
+# board: [ "nice_nano_v2" ]
+# shield: [ "corne_left", "corne_right" ]
+# include:
+#   - board: bdn9_rev2
+#   - board: nice_nano_v2
+#     shield: reviung41
+#
+---
+include:
+  - artifact-name: glovely_central
+    board: nrf52840_mdk_usb_dongle
+    shield: glovely_central
+    # snippet: zmk-usb-logging
+
+  - artifact-name: glovely_left
+    board: glove80_lh
+    shield: glovely_left
+    # snippet: zmk-usb-logging
+
+  - artifact-name: glovely_right
+    board: glove80_rh
+    shield: glovely_right
+    # snippet: zmk-usb-logging
+
+  # reset
+  - artifact-name: glovely_central_reset
+    board: nrf52840_mdk_usb_dongle
+    shield: settings_reset
+    # snippet: zmk-usb-logging
+    cmake-args: -DCONFIG_BUILD_OUTPUT_UF2=y -DCONFIG_BUILD_OUTPUT_UF2_FAMILY_ID="0xADA52840"
+
+  - artifact-name: glovely_left_reset
+    board: glove80_lh
+    # snippet: zmk-usb-logging
+    shield: settings_reset
+
+  - artifact-name: glovely_right_reset
+    board: glove80_rh
+    # snippet: zmk-usb-logging
+    shield: settings_reset

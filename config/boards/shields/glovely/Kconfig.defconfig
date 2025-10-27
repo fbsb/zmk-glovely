@@ -1,0 +1,53 @@
+if SHIELD_GLOVELY_CENTRAL
+
+# Max 16 characters in keyboard name
+config ZMK_KEYBOARD_NAME
+    default "Glovely"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
+
+# Set this to ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS + your desired number of BT profiles (default is 5)
+config BT_MAX_CONN
+    default 5
+
+# Set this to the same number as BT_MAX_CONN
+config BT_MAX_PAIRED
+    default 5
+
+config USB_DEVICE_STACK
+    default y
+
+endif
+
+if SHIELD_GLOVELY_LEFT
+
+# Max 16 characters in keyboard name
+config ZMK_KEYBOARD_NAME
+    default "Glovely left"
+
+endif
+
+if SHIELD_GLOVELY_RIGHT
+
+# Max 16 characters in keyboard name
+config ZMK_KEYBOARD_NAME
+    default "Glovely right"
+
+endif
+
+if SHIELD_GLOVELY_LEFT || SHIELD_GLOVELY_RIGHT
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+config ZMK_SPLIT
+    default y
+
+endif
