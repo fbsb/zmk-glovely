@@ -4,7 +4,7 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
-        zmk,studio-rpc-uart = &zmk_studio_rpc_usb_uart;
+        // zmk,studio-rpc-uart = &zmk_studio_rpc_usb_uart;
     };
 
     mock_kscan: mock_kscan_0 {
@@ -15,8 +15,8 @@
     };
 };
 
-&zephyr_udc0 {
-    zmk_studio_rpc_usb_uart: zmk_studio_rpc_usb_uart {
-        compatible = "zephyr,cdc-acm-uart";
-    };
-};
+// &zephyr_udc0 {
+    //     zmk_studio_rpc_usb_uart: zmk_studio_rpc_usb_uart {
+        //         compatible = "zephyr,cdc-acm-uart";
+    //     };
+// };
