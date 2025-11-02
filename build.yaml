@@ -29,18 +29,15 @@ include:
     # snippet: zmk-usb-logging
 
   # reset
-  - artifact-name: glovely_central_reset
-    board: nrf52840_mdk_usb_dongle
-    shield: settings_reset
-    # snippet: zmk-usb-logging
-    cmake-args: -DCONFIG_BUILD_OUTPUT_UF2=y -DCONFIG_BUILD_OUTPUT_UF2_FAMILY_ID="0xADA52840"
+  # - artifact-name: glovely_central_reset
+  #   board: nrf52840_mdk_usb_dongle
+  #   shield: settings_reset
+  #   cmake-args: -DCONFIG_BUILD_OUTPUT_UF2=y -DCONFIG_BUILD_OUTPUT_UF2_FAMILY_ID="0xADA52840"
 
-  - artifact-name: glovely_left_reset
-    board: glove80_lh
-    # snippet: zmk-usb-logging
-    shield: settings_reset
+  # - artifact-name: glovely_left_reset
+  #   board: glove80_lh
+  #   shield: settings_reset
 
-  - artifact-name: glovely_right_reset
-    board: glove80_rh
-    # snippet: zmk-usb-logging
-    shield: settings_reset
+  # - artifact-name: glovely_right_reset
+  #   board: glove80_rh
+  #   shield: settings_reset
