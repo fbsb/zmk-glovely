@@ -53,7 +53,7 @@
 71 54 55 72
 / {
     behaviors {
-        hml: home_row_mod_left {
+        hrml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -65,7 +65,7 @@
             hold-trigger-on-release;
             retro-tap;
         };
-        hmr: home_row_mod_right {
+        hrmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -78,14 +78,14 @@
             retro-tap;
         };
 
-        td_shcp_l: tap_dance_shift_left {
+        td_shcp_l: td_shift_caps_left {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LSHIFT>, <&caps_word>;
         };
 
-        td_shcp_r: tap_dance_shift_right {
+        td_shcp_r: td_shift_caps_right {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
@@ -128,12 +128,12 @@
 
         default_layer {
             bindings = <
-            &kp F1                &kp F2       &kp F3       &kp F4        &kp F5                                                                                                     &kp F6         &kp F7        &kp F8       &kp F9          &kp F10
-            &kp GRAVE             &kp N1       &kp N2       &kp N3        &kp N4             &kp N5                                                                          &kp N6  &kp N7         &kp N8        &kp N9       &kp N0          &kp MINUS
-            &kp ESC               &kp Q        &hml RALT W  &kp E         &kp R              &kp T                                                                           &kp Y   &kp U          &kp I         &hmr RALT O  &kp P           &kp EQUAL
-            &kp TAB               &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F      &kp G                                                                           &kp H   &hmr RSHIFT J  &hmr RCTRL K  &hmr LALT L  &hmr RGUI SEMI  &kp SQT
-            &kp INS               &kp Z        &kp X        &kp C         &kp V              &kp B   &none     &kp LGUI    &kp LALT    &kp DEL    &kp RET    &mo NAV_LAYER   &kp N   &kp M          &kp COMMA     &kp DOT      &kp FSLH        &kp BSLH
-            &mo SYSTEM_LAYER      &kp F11      &kp F12      &kp CAPS      &mo SYMBOL_LAYER           &kp BSPC  &td_shcp_l  &kp LCTRL   &kp RALT   &td_shcp_r &kp SPACE               &kp LEFT       &kp DOWN      &kp UP       &kp RIGHT       &kp PSCRN
+            &kp F1                &kp F2        &kp F3        &kp F4         &kp F5                                                                                                                  &kp F6          &kp F7         &kp F8        &kp F9           &kp F10
+            &kp GRAVE             &kp N1        &kp N2        &kp N3         &kp N4              &kp N5                                                                                      &kp N6  &kp N7          &kp N8         &kp N9        &kp N0           &kp MINUS
+            &kp ESC               &kp Q         &hrml RALT W  &kp E          &kp R               &kp T                                                                                       &kp Y   &kp U           &kp I          &hrmr RALT O  &kp P            &kp EQUAL
+            &kp TAB               &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &hrml LSHIFT F      &kp G                                                                                       &kp H   &hrmr RSHIFT J  &hrmr RCTRL K  &hrmr LALT L  &hrmr RGUI SEMI  &kp SQT
+            &kp INS               &kp Z         &kp X         &kp C          &kp V               &kp B   &kp LEFT_BRACKET  &kp LGUI    &kp LALT   &kp DEL    &kp RET    &kp RIGHT_BRACKET    &kp N   &kp M           &kp COMMA      &kp DOT       &kp FSLH         &kp BSLH
+            &mo SYSTEM_LAYER      &kp F11       &kp F12       &kp CAPS       &mo SYMBOL_LAYER            &kp BSPC          &td_shcp_l  &kp LCTRL  &kp RALT   &td_shcp_r &lt NAV_LAYER SPACE          &kp LEFT        &kp DOWN       &kp UP        &kp RIGHT        &kp PSCRN
             >;
         };
 
@@ -150,23 +150,23 @@
 
         nav_layer {
             bindings = <
-            &none  &none      &none     &none      &none                                                               &none     &none     &none      &none   &none
-            &none  &none      &none     &none      &none       &none                                            &none  &none     &none     &none      &none   &none
-            &none  &kp RMETA  &kp RALT  &kp RCTRL  &kp RSHIFT  &none                                            &none  &kp BSPC  &kp UP    &kp DEL    &none   &none
-            &none  &kp LMETA  &kp LALT  &kp LCTRL  &kp LSHIFT  &none                                            &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none   &none
-            &none  &none      &none     &none      &none       &none  &none  &none  &none  &none  &none  &none  &none  &kp HOME  &kp PG_DN &kp PG_UP  &kp END &none
-            &none  &none      &none     &none      &none              &none  &none  &none  &none  &none  &none         &none     &none     &none      &none   &none
+            &none  &none      &none     &none      &none                                                                   &none     &none     &none      &none      &none
+            &none  &none      &none     &none      &none       &none                                            &none      &none     &none     &none      &none      &none
+            &none  &kp RMETA  &kp RALT  &kp RCTRL  &kp RSHIFT  &none                                            &kp PG_UP  &kp BSPC  &kp UP    &kp DEL    &kp PG_DN  &none
+            &none  &kp LMETA  &kp LALT  &kp LCTRL  &kp LSHIFT  &none                                            &kp HOME   &kp LEFT  &kp DOWN  &kp RIGHT  &kp END    &none
+            &none  &none      &none     &none      &none       &none  &trans &trans &trans &trans &trans &trans &none      &none     &none     &none      &none      &none
+            &none  &none      &none     &none      &none              &trans &trans &trans &trans &trans &trans            &none     &none     &none      &none      &none
             >;
         };
 
         symbols_layer {
             bindings = <
-            &none  &none  &none  &none  &none                                                          &none  &none                 &none                  &none  &none
-            &none  &none  &none  &none  &none  &none                                            &none  &none  &none                 &none                  &none  &none
-            &none  &none  &none  &none  &none  &none                                            &none  &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none  &none
-            &none  &none  &none  &none  &none  &none                                            &none  &none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none  &none
-            &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp LESS_THAN         &kp GREATER_THAN       &none  &none
-            &none  &none  &none  &none  &none         &none  &none  &none  &none  &none  &none         &none  &none                 &none                  &none  &none
+            &trans  &none  &none  &none  &none                                                                     &none             &none              &none                  &none                  &trans
+            &trans  &none  &none  &none  &none  &none                                             &kp CARET        &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &trans
+            &trans  &none  &none  &none  &none  &none                                             &kp EXCLAMATION  &kp AT_SIGN       &kp HASH           &kp DOLLAR             &trans                 &trans
+            &trans  &none  &none  &none  &none  &none                                             &kp PERCENT      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &trans
+            &trans  &none  &none  &none  &none  &none  &trans &trans &trans &trans &trans &trans  &none            &kp GRAVE         &trans             &trans                 &trans                 &trans
+            &trans  &none  &none  &none  &none         &trans &trans &trans &trans &trans &trans                   &none             &none              &none                  &none                  &trans
             >;
         };
 
