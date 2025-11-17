@@ -4,7 +4,6 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
-        zmk,studio-rpc-uart = &zmk_studio_rpc_usb_uart;
     };
 
     mock_kscan: mock_kscan_0 {
@@ -12,11 +11,5 @@
         columns = <0>;
         rows = <0>;
         events = <0>;
-    };
-};
-
-&zephyr_udc0 {
-    zmk_studio_rpc_usb_uart: zmk_studio_rpc_usb_uart {
-        compatible = "zephyr,cdc-acm-uart";
     };
 };
