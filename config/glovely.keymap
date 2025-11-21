@@ -128,45 +128,45 @@
 
         default_layer {
             bindings = <
-            &kp F1                &kp F2        &kp F3        &kp F4         &kp F5                                                                                                                              &kp F6          &kp F7         &kp F8        &kp F9           &kp F10
-            &kp GRAVE             &kp N1        &kp N2        &kp N3         &kp N4              &kp N5                                                                                                  &kp N6  &kp N7          &kp N8         &kp N9        &kp N0           &kp MINUS
-            &kp ESC               &kp Q         &hrml RALT W  &kp E          &kp R               &kp T                                                                                                   &kp Y   &kp U           &kp I          &hrmr RALT O  &kp P            &kp EQUAL
-            &kp TAB               &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &hrml LSHIFT F      &kp G                                                                                                   &kp H   &hrmr RSHIFT J  &hrmr RCTRL K  &hrmr LALT L  &hrmr RGUI SEMI  &kp SQT
-            &kp INS               &kp Z         &kp X         &kp C          &kp V               &kp B   &kp LEFT_BRACKET  &kp LGUI    &kp LALT    &kp DEL   &kp RET     &lt SYMBOL_LAYER RIGHT_BRACKET  &kp N   &kp M           &kp COMMA      &kp DOT       &kp FSLH         &kp BSLH
-            &mo SYSTEM_LAYER      &kp F11       &kp F12       &kp CAPS       &mo SYMBOL_LAYER            &mt LCTRL BSPC    &td_shcp_l  &kp RALT    &kp RALT  &td_shcp_r  &lt NAV_LAYER SPACE                     &none           &none          &none         &none            &kp PSCRN
+            &kp F1            &kp F2   &kp F3   &kp F4    &kp F5                                                                                                                                         &kp F6  &kp F7     &kp F8   &kp F9    &kp F10
+            &kp GRAVE         &kp N1   &kp N2   &kp N3    &kp N4            &kp N5                                                                                                               &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
+            &kp ESC           &kp Q    &kp W    &kp E     &kp R             &kp T                                                                                                                &kp Y   &kp U   &kp I      &kp O    &kp P     &kp EQUAL
+            &kp TAB           &kp A    &kp S    &kp D     &kp F             &kp G                                                                                                                &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+            &kp INS           &kp Z    &kp X    &kp C     &kp V             &kp B   &lt SYMBOL_LAYER LEFT_BRACKET  &kp LGUI    &kp LALT    &kp DEL   &kp RET     &lt SYMBOL_LAYER RIGHT_BRACKET  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
+            &mo SYSTEM_LAYER  &kp F11  &kp F12  &kp CAPS  &mo SYMBOL_LAYER          &mt LCTRL BSPC                 &td_shcp_l  &kp RALT    &kp RALT  &td_shcp_r  &lt NAV_LAYER SPACE                     &none   &none      &none    &none     &kp PSCRN
             >;
         };
 
         qwerty_layer {
             bindings = <
-            &trans  &trans  &trans  &trans  &trans                                                                 &trans  &trans     &trans   &trans    &trans
-            &trans  &trans  &trans  &trans  &trans  &trans                                                 &trans  &trans  &trans     &trans   &trans    &trans
-            &trans  &kp Q   &kp W   &kp F   &kp P   &kp G                                                  &kp J   &kp L   &kp U      &kp Y    &kp SEMI  &trans
-            &trans  &kp A   &kp R   &kp S   &kp T   &kp D                                                  &kp H   &kp N   &kp E      &kp I    &kp O     &trans
-            &trans  &kp Z   &kp X   &kp C   &kp V   &kp B  &trans  &trans  &trans  &trans  &trans  &trans  &kp K   &kp M   &trans     &trans   &trans    &trans
-            &trans  &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans     &trans   &trans    &trans
+            &trans  &trans  &trans  &trans  &trans                                                                 &trans  &trans  &trans  &trans    &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                 &trans  &trans  &trans  &trans  &trans    &trans
+            &trans  &kp Q   &kp W   &kp F   &kp P   &kp G                                                  &kp J   &kp L   &kp U   &kp Y   &kp SEMI  &trans
+            &trans  &kp A   &kp R   &kp S   &kp T   &kp D                                                  &kp H   &kp N   &kp E   &kp I   &kp O     &trans
+            &trans  &kp Z   &kp X   &kp C   &kp V   &kp B  &trans  &trans  &trans  &trans  &trans  &trans  &kp K   &kp M   &trans  &trans  &trans    &trans
+            &trans  &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans    &trans
             >;
         };
 
         nav_layer {
             bindings = <
-            &none  &none      &none     &none      &none                                                                   &none     &none     &none      &none      &none
-            &none  &none      &none     &none      &none       &none                                            &none      &none     &none     &none      &none      &none
-            &none  &kp RMETA  &kp RALT  &kp RCTRL  &kp RSHIFT  &none                                            &kp PG_UP  &kp BSPC  &kp UP    &kp DEL    &kp PG_DN  &none
-            &none  &kp LMETA  &kp LALT  &kp LCTRL  &kp LSHIFT  &none                                            &kp HOME   &kp LEFT  &kp DOWN  &kp RIGHT  &kp END    &none
-            &none  &none      &none     &none      &none       &none  &trans &trans &trans &trans &trans &trans &none      &none     &none     &none      &none      &none
-            &none  &none      &none     &none      &none              &trans &trans &trans &trans &trans &trans            &none     &none     &none      &none      &none
+            &none  &none      &none        &none        &none                                                                    &none      &none      &none      &none      &none
+            &none  &none      &none        &none        &none        &none                                            &none      &none      &none      &none      &none      &none
+            &none  &kp RMETA  &kp RALT     &kp RCTRL    &kp RSHIFT   &none                                            &kp PG_UP  &kp BSPC   &kp UP     &kp DEL    &kp PG_DN  &none
+            &none  &kp LMETA  &kp LALT     &kp LCTRL    &kp LSHIFT   &none                                            &kp HOME   &kp LEFT   &kp DOWN   &kp RIGHT  &kp END    &none
+            &none  &kp LC(Z)  &kp LS(DEL)  &kp LC(INS)  &kp LS(INS)  &none  &trans &trans &trans &trans &trans &trans &none      &none      &none      &none      &none      &none
+            &none  &none      &none        &none        &none               &trans &trans &trans &trans &trans &trans            &kp SPACE  &kp TAB    &kp RET    &kp ESC    &none
             >;
         };
 
         symbols_layer {
             bindings = <
-            &trans  &none  &none  &none  &none                                                                     &none             &none              &none                  &none                  &trans
-            &trans  &none  &none  &none  &none  &none                                             &kp CARET        &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &trans
-            &trans  &none  &none  &none  &none  &none                                             &kp EXCLAMATION  &kp AT_SIGN       &kp HASH           &kp DOLLAR             &trans                 &trans
-            &trans  &none  &none  &none  &none  &none                                             &kp PERCENT      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &trans
-            &trans  &none  &none  &none  &none  &none  &trans &trans &trans &trans &trans &trans  &none            &kp GRAVE         &trans             &trans                 &trans                 &trans
-            &trans  &none  &none  &none  &none         &trans &trans &trans &trans &trans &trans                   &none             &none              &none                  &none                  &trans
+            &trans  &none  &none  &none  &none                                                                          &none             &none              &none                  &none                  &trans
+            &trans  &none  &none  &none  &none       &none                                             &kp CARET        &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &trans
+            &trans  &none  &none  &none  &none       &none                                             &kp EXCLAMATION  &kp AT_SIGN       &kp HASH           &kp DOLLAR             &trans                 &trans
+            &trans  &none  &none  &none  &kp LSHIFT  &none                                             &kp PERCENT      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &trans
+            &trans  &none  &none  &none  &none       &none  &trans &trans &trans &trans &trans &trans  &none            &kp GRAVE         &trans             &trans                 &trans                 &trans
+            &trans  &none  &none  &none  &none              &trans &trans &trans &trans &trans &trans                   &none             &none              &none                  &none                  &trans
             >;
         };
 
